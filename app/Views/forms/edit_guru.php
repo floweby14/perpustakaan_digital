@@ -1,0 +1,297 @@
+        <section class="content">
+
+            <div class="body_scroll">
+
+                <div class="block-header">
+
+                    <div class="row">
+
+                        <div class="col-lg-7 col-md-6 col-sm-12">
+
+                            <h2>Edit Data Guru</h2>
+
+                        </div>
+
+                        <div class="col-lg-5 col-md-6 col-sm-12">
+
+                            <a href="/home/guru">
+                                
+                                <button class="btn btn-secondary btn-icon float-right" type="buttin"><i class="zmdi zmdi-chevron-left"></i></button>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="container-fluid">
+
+                    <div class="row clearfix">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+
+                            <div class="card">
+
+                                <div class="body">
+
+                                    <form class="form-horizontal" action="<?= base_url('/home/aksi_edit_guru')?>" method="POST">
+
+                                        <input type="hidden" name="id_user" value="<?php echo $userData -> id_user ?>">
+                                        <input type="hidden" name="id_guru" value="<?php echo $guruData -> userGuru ?>">
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="username_input">Username <span style="color: #ff0000;">*</span></label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <input type="text" value="<?php echo $userData -> username ?>" name="username" id="username_input" placeholder="username" class="form-control" required>
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-12 col-md-10 col-sm-8">
+
+                                                <div class="form-group"></div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="nik_input">NIK <span style="color: #ff0000;">*</span></label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <input type="text" value="<?php echo $guruData -> nik ?>" name="nik" id="nik_input" placeholder="nik" class="form-control" required>
+                                                    
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="nama_lengkap_input">Nama Lengkap <span style="color: #ff0000;">*</span></label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <input type="text" value="<?php echo $guruData -> nama_lengkap_guru ?>" name="nama_lengkap" id="nama_lengkap_input" placeholder="nama" class="form-control" required>
+                                                    
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="jenis_kelamin_input">Jenis Kelamin <span style="color: #ff0000;">*</span></label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <select class="form-control" name="jenis_kelamin" id="jenis_kelamin_input" required>
+
+                                                        <option disabled selected>-- Pilih Jenis Kelamin --</option>
+                                                        <option value="laki-laki" <?php echo ($guruData -> jenis_kelamin_guru == 'laki-laki') ? 'selected' : '' ?>>Laki - Laki</option>
+                                                        <option value="perempuan" <?php echo ($guruData -> jenis_kelamin_guru == 'perempuan') ? 'selected' : '' ?>>Perempuan</option>
+
+                                                    </select>
+                                                    
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="agama_input">Agama</label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <select class="form-control" name="agama" id="agama_input">
+
+                                                        <option disabled selected>-- Pilih Agama --</option>
+                                                        <option value="kristen" <?php echo ($guruData -> agama_guru == 'kristen') ? 'selected' : '' ?>>Kristen</option>
+                                                        <option value="islam" <?php echo ($guruData -> agama_guru == 'islam') ? 'selected' : '' ?>>Islam</option>
+                                                        <option value="katolik" <?php echo ($guruData -> agama_guru == 'katolik') ? 'selected' : '' ?>>Katolik</option>
+                                                        <option value="hindu" <?php echo ($guruData -> agama_guru == 'hindu') ? 'selected' : '' ?>>Hindu</option>
+                                                        <option value="budha" <?php echo ($guruData -> agama_guru == 'budha') ? 'selected' : '' ?>>Budha</option>
+                                                        <option value="konghucu" <?php echo ($guruData -> agama_guru == 'konghucu') ? 'selected' : '' ?>>Konghucu</option>
+
+                                                    </select>
+                                                    
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="tempat_lahir_input">Tempat Lahir</label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <input type="text" value="<?php echo $guruData -> tempat_lahir_guru ?>" name="tempat_lahir" id="tempat_lahir_input" placeholder="tempat lahir" class="form-control">
+                                                    
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="tanggal_lahir_input">Tanggal Lahir</label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <input type="date" value="<?php echo $guruData -> tanggal_lahir_guru ?>" name="tanggal_lahir" id="tanggal_lahir_input" placeholder="tanggal_lahir" class="form-control">
+                                                    
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="alamat_input">Alamat</label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <input type="text" value="<?php echo $guruData -> alamat_guru ?>" name="alamat" id="alamat_input" placeholder="alamat" class="form-control">
+                                                    
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="no_handphone_input">Nomor Handphone</label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <input type="text" value="<?php echo substr($guruData -> no_handphone_guru, 4) ?>" name="no_handphone" id="no_handphone_input" placeholder="8XX-XXXX-XXXX" pattern="8[0-9]{2}-[0-9]{4}-[0-9]{4,5}" maxlength="16" class="form-control">
+                                                    
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+
+                                                <label for="level_input">Level <span style="color: #ff0000;">*</span></label>
+
+                                            </div>
+
+                                            <div class="col-lg-10 col-md-10 col-sm-8">
+
+                                                <div class="form-group">
+
+                                                    <select class="form-control" name="level" id="level_input" required>
+
+                                                        <option disabled selected>-- Pilih Level --</option>
+                                                        <option value="2" <?php echo ($userData -> level == '2') ? 'selected' : '' ?>>Kepala Sekolah</option>
+                                                        <option value="3" <?php echo ($userData -> level == '3') ? 'selected' : '' ?>>Kajur</option>
+                                                        <option value="4" <?php echo ($userData -> level == '4') ? 'selected' : '' ?>>Guru</option>
+
+                                                    </select>
+                                                    
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row clearfix d-flex justify-content-center">
+
+                                            <button type="submit" class="btn btn-md btn-round btn-success">Submit</button>
+                                            
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </section>
